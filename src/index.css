@@ -1,0 +1,104 @@
+@font-face {
+    font-family: pop-bold;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: pop-med;
+    src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: pop-reg;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+
+:root {
+    /* typography */
+    --pBold: pop-bold;
+    --pMed: pop-med;
+    --pReg: pop-reg;
+    /* paint */
+    --dark: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#root {
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    /* background-color: yellow; */
+}
+
+
+/* font family and sizest */
+.ts-36 {
+    font-family: var(--pMed);
+    font-size: 36px;
+}
+
+.ts-28 {
+    font-family: var(--pMed);
+    font-size: 28px;
+}
+
+.ts-24 {
+    font-family: var(--pMed);
+    font-size: 24px;
+}
+
+.ts-20 {
+    font-family: var(--pReg);
+    font-size: 20px;
+}
+
+.ts-16 {
+    font-family: var(--pReg);
+    font-size: 16px;
+}
+
+.ts-14 {
+    font-family: var(--pReg);
+    font-size: 14px;
+}
+
+.ts-12 {
+    font-family: var(--pReg);
+    font-size: 12px;
+}
+
+/* font weight */
+.tw-700 {
+    font-weight: 700;
+}
+
+.tw-600 {
+    font-weight: 600;
+}
+
+.tw-500 {
+    font-weight: 500;
+}
+
+.tw-300 {
+    font-weight: 300;
+}
+
+.tw-400 {
+    font-weight: 400;
+}
+
+.tw-275 {
+    font-weight: 275;
+}
+
+.tw-500 {
+    font-weight: 500;
+}

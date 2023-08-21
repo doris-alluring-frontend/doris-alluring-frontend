@@ -1,0 +1,119 @@
+.homepage {
+    // background-color: yellow;
+    .landing {
+        // the header can come in here
+        .main {
+            .title {
+                // background-color: red;
+                margin-top: 100px;
+                width: 414px;
+                letter-spacing: 6px;
+            }
+            .main-image {
+                max-width: 501px;
+                width: 50%;
+                height: 484px;
+                object-fit: cover;
+            }
+        }
+    }
+    .divider {}
+    .product{
+        .wrap{
+            .left{
+                max-width: 530px;
+                min-height: 311px;
+            }
+            .right{
+                max-width: 717px;
+                gap: 20px;
+                .lp-card {
+                    // background-color: yellow;
+                    width: 320px;
+                    height: 474px;
+                    // overflow: hidden;
+                    .lp-image {
+                        max-width: 320px;
+                        width: 100%;
+                        height: 314.75px;
+                        object-fit: cover;
+                    }
+                    .lp-body {
+
+                    }
+                    .order {
+                        height: 42px;
+                        .amount,
+                        .cart {
+                            width: 30%;
+                            height: 42px;
+                        }
+                    }
+                }
+            }
+        }
+        .products {
+            .prod-gallery-card {
+                // background-color: yellow;
+                width: 24%;
+                max-width: 250px;
+                .prod-gallery-image {
+                    width: 100%;
+                    max-width: 250px;
+                    height: 245px;
+                    object-fit: cover;
+                }
+                .prod-gallery-body {
+
+                }
+                .order {
+                    height: 42px;
+                    .amount,
+                    .cart {
+                        width: 30%;
+                        height: 42px;
+                    }
+                }
+            }
+        }
+    }
+    .blog {
+        // .blog-title {}
+        .articles {
+            // background-color: red;
+            max-width: 1246px;
+            .blog-card {
+                width: 30%;
+                max-width: 350px;
+                .blog-img {
+                    width: 100%;
+                    max-width: 350px;
+                    height: 298px;
+                    object-fit: cover;
+                }
+                .blog-body {
+                    .blog-title{}
+                    .blog-text{
+                        // width: 100%;
+                        // color: red;
+                        max-width: 255px;
+                        height: 132px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    .homepage {
+        .landing {
+            .main {
+                .title {}
+                .main-image {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

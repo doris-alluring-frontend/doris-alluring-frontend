@@ -1,0 +1,31 @@
+.hero {
+    /* background-color: black; */
+}
+
+.hero .hero-wrap {
+    height: 36px;
+}
+
+.hero .hero-wrap div {
+    width: 20%;
+}
+
+.hero .hero-wrap .shop .shop-text {
+    /* font-family: var(--pBold); */
+}
+
+.hero .hero-wrap .shop .search .search-icon {
+    font-size: 15px;
+}
+
+.hero .hero-wrap .hero-title {
+
+}
+
+.hero .hero-wrap .menu {
+
+}
+
+.hero .hero-wrap .menu .blog-link {}
+
+.hero .hero-wrap .menu .menu-icon {}

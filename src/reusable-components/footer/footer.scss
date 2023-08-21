@@ -1,0 +1,38 @@
+.footer {
+    padding-top: 50px;
+    .wrap {
+        background-color: var(--dark);
+        .footer-main {
+            height: 267px;
+            // background-color: rgb(26, 21, 21); 
+            // &> * .title {
+            //     font-size: 50px;
+            // }
+            .about {
+                width: 301px;
+                .text-wrap {
+                    min-height: 91px;
+                }
+            }
+            .quick-access {
+
+            }
+            .email-form {
+                width: 309px;
+                .email {
+                    height: 44px;
+                    input {
+                        width: 80%;
+                        border: none;
+                        height: 100%;
+                        outline: none;
+                    }
+                    .submit-btn {
+                        width: 20%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

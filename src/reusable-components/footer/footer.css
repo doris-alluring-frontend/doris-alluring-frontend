@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 50px;
+}
+.footer .wrap {
+  background-color: var(--dark);
+}
+.footer .wrap .footer-main {
+  height: 267px;
+}
+.footer .wrap .footer-main .about {
+  width: 301px;
+}
+.footer .wrap .footer-main .about .text-wrap {
+  min-height: 91px;
+}
+.footer .wrap .footer-main .email-form {
+  width: 309px;
+}
+.footer .wrap .footer-main .email-form .email {
+  height: 44px;
+}
+.footer .wrap .footer-main .email-form .email input {
+  width: 80%;
+  border: none;
+  height: 100%;
+  outline: none;
+}
+.footer .wrap .footer-main .email-form .email .submit-btn {
+  width: 20%;
+  height: 100%;
+}

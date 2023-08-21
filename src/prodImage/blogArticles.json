@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-1.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    },
+    {
+        "id": 2,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-2.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    },
+    {
+        "id": 3,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-3.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    },
+    {
+        "id": 4,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-4.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    },
+    {
+        "id": 5,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-5.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    },
+    {
+        "id": 6,
+        "title": "Water a secret remedy for your skin",
+        "src": "./assets/images/article-6.jpg",
+        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus"
+    }
+]
