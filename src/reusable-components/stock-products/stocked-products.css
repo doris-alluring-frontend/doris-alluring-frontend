@@ -1,0 +1,18 @@
+.products .prod-gallery-card {
+  width: 24%;
+  max-width: 250px;
+}
+.products .prod-gallery-card .prod-gallery-image {
+  width: 100%;
+  max-width: 250px;
+  height: 245px;
+  object-fit: cover;
+}
+.products .prod-gallery-card .order {
+  height: 42px;
+}
+.products .prod-gallery-card .order .amount,
+.products .prod-gallery-card .order .cart {
+  width: 30%;
+  height: 42px;
+}

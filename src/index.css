@@ -18,8 +18,20 @@
     --pBold: pop-bold;
     --pMed: pop-med;
     --pReg: pop-reg;
+
     /* paint */
     --dark: black;
+
+    /* font sizes */
+    --s-36: 36px;
+    --s-28: 28px;
+    --s-24: 24px;
+    --s-20: 20px;
+    --s-16: 16px;
+    --s-14: 14px;
+    --s-12: 12px;
+
+    /* font weight */
 }
 
 html {
@@ -41,37 +53,37 @@ body {
 /* font family and sizest */
 .ts-36 {
     font-family: var(--pMed);
-    font-size: 36px;
+    font-size: var(--s-36);
 }
 
 .ts-28 {
     font-family: var(--pMed);
-    font-size: 28px;
+    font-size:  var(--s-28);
 }
 
 .ts-24 {
     font-family: var(--pMed);
-    font-size: 24px;
+    font-size: var(--s-24);
 }
 
 .ts-20 {
     font-family: var(--pReg);
-    font-size: 20px;
+    font-size: var(--s-20);
 }
 
 .ts-16 {
     font-family: var(--pReg);
-    font-size: 16px;
+    font-size: var(--s-16);
 }
 
 .ts-14 {
     font-family: var(--pReg);
-    font-size: 14px;
+    font-size: var(--s-14);
 }
 
 .ts-12 {
     font-family: var(--pReg);
-    font-size: 12px;
+    font-size: var(--s-12);
 }
 
 /* font weight */
@@ -101,4 +113,17 @@ body {
 
 .tw-500 {
     font-weight: 500;
+}
+
+@media  screen and (max-width: 600px) {
+    .ts-36, 
+    .ts-28 {
+        font-size: var(--s-20);
+    }
+    .ts-24 {
+        font-size: var(--s-16);
+    }
+    .ts-20 {
+        font-size: var(--s-14);
+    }
 }

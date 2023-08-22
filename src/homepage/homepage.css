@@ -1,6 +1,9 @@
+.homepage .landing .main .text-wrap {
+  width: 100%;
+  max-width: 414px;
+}
 .homepage .landing .main .title {
   margin-top: 100px;
-  width: 414px;
   letter-spacing: 6px;
 }
 .homepage .landing .main .main-image {
@@ -35,24 +38,6 @@
   width: 30%;
   height: 42px;
 }
-.homepage .product .products .prod-gallery-card {
-  width: 24%;
-  max-width: 250px;
-}
-.homepage .product .products .prod-gallery-card .prod-gallery-image {
-  width: 100%;
-  max-width: 250px;
-  height: 245px;
-  object-fit: cover;
-}
-.homepage .product .products .prod-gallery-card .order {
-  height: 42px;
-}
-.homepage .product .products .prod-gallery-card .order .amount,
-.homepage .product .products .prod-gallery-card .order .cart {
-  width: 30%;
-  height: 42px;
-}
 .homepage .blog .articles {
   max-width: 1246px;
 }
@@ -71,8 +56,15 @@
   height: 132px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .homepage .landing .main .title {
+    margin-top: 0px;
+  }
   .homepage .landing .main .main-image {
     width: 100%;
+    height: 307px;
+  }
+  .homepage .product .wrap .left {
+    min-height: 132px;
   }
 }

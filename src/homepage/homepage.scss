@@ -3,10 +3,14 @@
     .landing {
         // the header can come in here
         .main {
+            .text-wrap {
+                width: 100%;
+                max-width: 414px;
+            }
             .title {
                 // background-color: red;
                 margin-top: 100px;
-                width: 414px;
+                // max-width: 414px;
                 letter-spacing: 6px;
             }
             .main-image {
@@ -52,30 +56,6 @@
                 }
             }
         }
-        .products {
-            .prod-gallery-card {
-                // background-color: yellow;
-                width: 24%;
-                max-width: 250px;
-                .prod-gallery-image {
-                    width: 100%;
-                    max-width: 250px;
-                    height: 245px;
-                    object-fit: cover;
-                }
-                .prod-gallery-body {
-
-                }
-                .order {
-                    height: 42px;
-                    .amount,
-                    .cart {
-                        width: 30%;
-                        height: 42px;
-                    }
-                }
-            }
-        }
     }
     .blog {
         // .blog-title {}
@@ -105,13 +85,25 @@
     }
 }
 
-@media  screen and (max-width: 500px) {
+@media  screen and (max-width: 600px) {
     .homepage {
         .landing {
             .main {
-                .title {}
+                .title {
+                    margin-top: 0px;
+                    // color: blue;
+                }
                 .main-image {
                     width: 100%;
+                    height: 307px;
+                }
+            }
+        }
+        .product {
+            .wrap {
+                .left {
+                    min-height: 132px;
+                    // background-color: red;
                 }
             }
         }

@@ -1,0 +1,17 @@
+.product-page .wrap .product-display .filter .dropdown,
+.product-page .wrap .product-display .filter .search-form {
+  max-width: 153px;
+  width: 25%;
+  height: 36px;
+}
+.product-page .wrap .product-display .filter .search-form .user-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+.product-page .wrap .product-display .filter .search-form .submit-icon {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

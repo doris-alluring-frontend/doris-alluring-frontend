@@ -1,0 +1,24 @@
+.products {
+    .prod-gallery-card {
+        // background-color: yellow;
+        width: 24%;
+        max-width: 250px;
+        .prod-gallery-image {
+            width: 100%;
+            max-width: 250px;
+            height: 245px;
+            object-fit: cover;
+        }
+        .prod-gallery-body {
+
+        }
+        .order {
+            height: 42px;
+            .amount,
+            .cart {
+                width: 30%;
+                height: 42px;
+            }
+        }
+    }
+}
