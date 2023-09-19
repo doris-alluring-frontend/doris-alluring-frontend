@@ -15,13 +15,13 @@ const Articles_2 = blogArticles.slice(3);
 function Homepage() {
     return <div className="homepage container-fluid p-0">
 
-        <div className="landing container border border-info p-lg-0 mb-5">
+        <div className="landing container p-lg-0 mb-5">
             <Header />
 
             <div className="main border d-flex flex-column flex-lg-row align-items-start justify-content-between">
-                <div className='text-wrap border border-danger order-2 order-lg-1'>
+                <div className='text-wrap order-2 order-lg-1'>
 
-                    <h1 className="title text-uppercase title-text border text-center ts-36">Doris Alluring</h1>
+                    <h1 className="title text-uppercase title-text text-center ts-36">Doris Alluring</h1>
                     
                     <p className='detail d-block d-lg-none ts-14 tw-275'>
                         Quos veniam voluptatum dolores soluta molestiae harum, 
@@ -39,10 +39,10 @@ function Homepage() {
 
         <hr className="divider"/>
 
-        <div className="product container border border-info p-lg-0 mt-5">
+        <div className="product container p-lg-0 mt-5">
 
             <div className='wrap d-flex flex-column flex-lg-row justify-content-between'>
-                <div className='left border border-danger'>
+                <div className='left'>
                     <h2 className='title text-uppercase text-center text-lg-start tw-500 ts-28'>Our Latest Product</h2>
                     <p className='text tw-275 ts-20'>
                         Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! 
@@ -74,7 +74,7 @@ function Homepage() {
 
         <hr className="divider"/>
 
-        <section className='blog container py-5 border border-info' id='blog'>
+        <section className='blog container py-5 ' id='blog'>
             <h2 className='blog-title text-uppercase text-center ts-28 tw-500'>Blog</h2>
             
             <div className='articles d-flex justify-content-between mt-5'>

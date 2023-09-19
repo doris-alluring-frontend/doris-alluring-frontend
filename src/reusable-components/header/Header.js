@@ -2,9 +2,9 @@ import './header.css';
 
 function Header() {
     return <header className="hero py-4">
-        <div className="hero-wrap d-flex align-items-center justify-content-between border">
+        <div className="hero-wrap d-flex align-items-center justify-content-between">
 
-            <div className="shop d-none d-lg-flex align-items-center  border justify-content-between">
+            <div className="shop d-none d-lg-flex align-items-center justify-content-between">
                 <p className="shop-text m-0 ts-16 tw-400">shop</p>
                 <span className="search">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="search-icon">
