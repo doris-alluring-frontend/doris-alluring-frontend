@@ -23,7 +23,7 @@ function Homepage() {
 
                     <h1 className="title text-uppercase title-text text-center ts-36">Doris Alluring</h1>
                     
-                    <p className='detail d-block d-lg-none ts-14 tw-275'>
+                    <p className='detail d-block  ts-14 tw-275 text-center'>
                         Quos veniam voluptatum dolores soluta molestiae harum, 
                         ex doloribus! Aliquid nihil nulla temporibus suscipit 
                         veritatis ea vero quisquam repudiandae expedita fuga 
@@ -42,7 +42,7 @@ function Homepage() {
         <div className="product container p-lg-0 mt-5">
 
             <div className='wrap d-flex flex-column flex-lg-row justify-content-between'>
-                <div className='left'>
+                <div className='left latest-product-content'>
                     <h2 className='title text-uppercase text-center text-lg-start tw-500 ts-28'>Our Latest Product</h2>
                     <p className='text tw-275 ts-20'>
                         Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! 
@@ -50,7 +50,7 @@ function Homepage() {
                         repudiandae expedita fuga dignissimos quasi, at, quia fugiat labore 
                         itaque nam natus.
                     </p>
-                    <button type='button' className='btn btn-dark w-25 d-none d-lg-block'>Shop</button>
+                    <button type='button' className='btn btn-dark w-25 d-lg-block '>Shop</button>
                 </div>
 
                 <div className='right d-flex flex-column flex-lg-row align-items-center justify-content-between'>

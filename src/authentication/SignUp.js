@@ -35,11 +35,11 @@ const SignUp = () => {
   return (
     <div className="container main-container">
       <div className="image-div">
-        <img src={signUpImg} alt="" className="w-100" />
+        <img src={signUpImg} alt="" className="w-100 h-100" />
       </div>
       <div className="form-div">
-        <form className="p-5 form-border">
-          <h1 className="text-center">Register</h1>
+        <form className="p-5 ">
+          <h1 className="text-center auth-title-text">Register</h1>
           <div className="input-container">
             <label htmlFor="firstName">First Name</label>
             <input

@@ -2,25 +2,29 @@
     {
         "id": 1,
         "src": "./assets/images/product-1.jpg",
-        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "desc": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "productName": "Product name",
         "amount": "12:00"
     },
     {
         "id": 2,
         "src": "./assets/images/product-2.png",
-        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "desc": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "productName": "Product name",
         "amount": "12:00"
     },
     {
         "id": 3,
         "src": "./assets/images/product-1.jpg",
-        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "desc": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "productName": "Product name",
         "amount": "12:00"
     },
     {
         "id": 4,
         "src": "./assets/images/product-2.png",
-        "brief": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "desc": "Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus sus",
+        "productName": "Product name",
         "amount": "12:00"
     }
 ]
