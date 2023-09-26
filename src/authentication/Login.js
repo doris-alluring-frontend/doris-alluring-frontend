@@ -10,7 +10,7 @@ const Login = () => {
         <img src={signUpImg} alt="" className="w-100" />
       </div>
       <div className="form-div">
-      <a href="/signup" className="px-5">Sign Up</a>
+      <a href="/signup" className="px-5 page-redirect-link">Sign Up</a>
         <form className="p-5 ">
           <h1 className="text-center mb-5 auth-title-text">Welcome</h1>
           <div className="input-container">
@@ -31,10 +31,10 @@ const Login = () => {
               placeholder="Password"
             />
           </div>
-          <CustomButton text="Login" maxWidth="440px" width="100%" height="50px" />
+          <CustomButton text="Login" maxWidth="440px" width="100%" height="50px" backgroundColor="#3B522F" borderRadius="20px"/>
           <div className="redirect d-flex justify-content-between">
             <p>Forgot your password?</p>
-            <a href="/signup" className="text-danger">reset</a>
+            <a href="/forgot-password" className="text-danger">reset</a>
         </div>
         </form>
       </div>

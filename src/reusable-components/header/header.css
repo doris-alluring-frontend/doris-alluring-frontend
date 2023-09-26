@@ -1,6 +1,26 @@
 .hero {
     /* background-color: black; */
 }
+.navigation-btn-div {
+    border: 1px solid red;
+    
+    /* margin-left: 200px; */
+}
+
+.increase-gap {
+    gap: 50%;
+}
+.blog-link{
+    text-decoration: none;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 6.4px;
+    color: black;
+}
+
+.hero-title{
+    /* border: 1px solid red; */
+}
 
 .hero .hero-wrap {
     height: 36px;

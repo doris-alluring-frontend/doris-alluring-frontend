@@ -1,3 +1,4 @@
+import "./blogCard.css"
 function BlogCard({src, brief, title, displayClass}) {
     return <div className={`blog-card card ${displayClass}`}>
 

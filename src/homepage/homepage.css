@@ -49,6 +49,7 @@
 .homepage .blog .articles .blog-card {
   width: 30%;
   max-width: 350px;
+  box-shadow: 5px 5px 10px white;
 }
 .homepage .blog .articles .blog-card .blog-img {
   width: 100%;
