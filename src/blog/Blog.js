@@ -1,5 +1,15 @@
+import Header from "../reusable-components/header/Header";
+
 function Blog() {
-    return <h1>Blog page</h1>
+    return(
+     <>
+     <div className="container">
+       <Header/>
+       
+     </div>
+        
+    </>
+    )
 }
 
 export default Blog;

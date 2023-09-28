@@ -62,6 +62,7 @@
   height: 132px;
 }
 
+
 @media screen and (max-width: 768px){
   .homepage .landing .main .main-image {
     max-width: 700px;

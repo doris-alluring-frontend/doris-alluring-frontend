@@ -17,13 +17,46 @@
     letter-spacing: 6.4px;
     color: black;
 }
+.small-screen-menu{
+    background-color: white;
+box-shadow: 5px 5px 5px whitesmoke;
+    position: fixed;
+    top: 10;
+    width: 50%;
+    transition: 1s ease-in-out;
+    z-index: 3;
+  }
+  .small-screen-menu ul{
+    list-style-type: none;
+    padding-top: 20px;
+    padding-left: 10px;
+   
+  }
+  .menu-link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-size: 400;
 
-.hero-title{
+  }
+  .menu-link:hover{
+    color: #C92E81;
+    cursor: pointer;
+  }
+
+  .small-screen-menu .visible {
+    left: 0;
+  }
+.hero{
+    background-color: white;
+    box-shadow: 5px 5px 10px whitesmoke;
     /* border: 1px solid red; */
+   
 }
 
 .hero .hero-wrap {
     height: 36px;
+    
 }
 
 .hero .hero-wrap div {
