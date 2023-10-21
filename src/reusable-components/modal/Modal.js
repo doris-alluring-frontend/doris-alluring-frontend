@@ -7,6 +7,7 @@
 // }
 // export default Modal;
 import { forwardRef } from "react";
+import "../../authentication/signup.css"
 const Modal = forwardRef(({children,show,onClose},ref) =>{
   
     if(!show){

@@ -6,6 +6,7 @@ import Product from './product/Product';
 import ForgotPassword from './authentication/ForgotPassword';
 import Otp from './authentication/Otp';
 import Blog from './blog/Blog';
+import UserDashboard from './userDashboard/UserDashboard';
 
 // let query = matchMedia("(max-width: 600px)");
 // console.log(query.matches);
@@ -20,6 +21,7 @@ function App() {
       <Route path='/' element={<Homepage />} />
       <Route path='/product' element={<Product />} />
       <Route path='/blog' element={<Blog/>}/>
+      <Route path='/userDashboard' element={<UserDashboard/>}/>
     </Routes>
   </>
 }

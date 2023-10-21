@@ -1,8 +1,8 @@
-import React, { useState, useRef,useEffect } from 'react';
+import React, {useRef,useEffect } from 'react';
 import "./otpInput.css";
 
-const OtpInput = () => {
-  const [otpValue, setOtpValue] = useState(["", "", "", ""]);
+const OtpInput = ({otpValue,setOtpValue}) => {
+  
   const inputReference = useRef([]);
   useEffect(() => {
     inputReference.current[0].focus();

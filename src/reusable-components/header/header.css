@@ -1,11 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .hero {
     /* background-color: black; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
-.navigation-btn-div {
-    border: 1px solid red;
-    
-    /* margin-left: 200px; */
+header{
+ 
+  max-width: 100%;
+  /* margin-left: 0; */
 }
+
 
 .increase-gap {
     gap: 50%;
@@ -19,12 +29,11 @@
 }
 .small-screen-menu{
     background-color: white;
-box-shadow: 5px 5px 5px whitesmoke;
     position: fixed;
     top: 10;
     width: 50%;
     transition: 1s ease-in-out;
-    z-index: 3;
+    z-index:3;
   }
   .small-screen-menu ul{
     list-style-type: none;
@@ -49,7 +58,7 @@ box-shadow: 5px 5px 5px whitesmoke;
   }
 .hero{
     background-color: white;
-    box-shadow: 5px 5px 10px whitesmoke;
+    /* box-shadow: 5px 5px 10px whitesmoke; */
     /* border: 1px solid red; */
    
 }

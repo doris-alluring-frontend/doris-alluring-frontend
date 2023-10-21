@@ -3,7 +3,36 @@ import Modal from "../reusable-components/modal/Modal";
 import CustomButton from "../reusable-components/CustomButton";
 import OtpInput from "../reusable-components/otpInput/OtpInput";
 import "./signup.css";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 const Otp = () =>{
+    let navigate = useNavigate();
+    const [otpValue, setOtpValue] = useState(["", "", "", ""]);
+
+    const handleSubmit =async (e)=>{
+        e.preventDefault();
+        let value  = ""+ otpValue[0]+otpValue[1]+otpValue[2]+otpValue[3] ;
+        console.log(value);
+        let otp = {
+            "token": value
+        }
+            try{
+              let response =await axios
+              .post("http://localhost:8080/api/v1/auth/confirmToken", otp)
+              // .then((response)=> {
+                if (response.status === 200) {
+                  console.log(response);
+                  navigate("/product");
+                }
+                  console.log(response.data)
+              // });
+            }catch(error){
+              console.log(error.response)
+            }
+           
+       
+      }
   return(
     <>
     <div className="pt-3">
@@ -25,10 +54,16 @@ const Otp = () =>{
              <div className="input-container">
                  <p className="otp-intro-text">check your email address a 4 digit code has <br/> been sent,Kindly input the code below</p>
                  <label htmlFor="password" className="otp-label pt-3">Enter OTP</label>
-                 <OtpInput/>
+                 <OtpInput otpValue={otpValue} setOtpValue={setOtpValue} />
             </div>
              <div className="pb-2">
-                 <CustomButton text="Verify" maxWidth="440px" width="100%" height="50px" backgroundColor="#3B522F" borderRadius="20px"/>
+                 <CustomButton text="Verify" maxWidth="440px" width="100%" height="50px" backgroundColor="#3B522F" borderRadius="20px"
+                 onClick={(e)=>
+                {
+                 handleSubmit(e);
+                
+                }}
+                  />
              </div>
              
              </form>     
