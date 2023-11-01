@@ -16,7 +16,6 @@
   color: #C92E81;
 }
 .carousel-captiony{
-  /* border: 1px solid red; */
   position: absolute;
   top: 45%;
   left: 14%;
@@ -33,7 +32,12 @@
   padding: 5px;
   font-weight: 700;
   line-height: 2.0;
+  
  
+}
+.hero-text-div{
+  text-align: justify;
+  width: 100%;
 }
 
 .vertical-line{

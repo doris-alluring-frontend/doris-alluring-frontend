@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 10%;
+    
+
+}
+#my-container{
+    /* border: 1px solid red; */
+   
+}
+.side-nav{
+    max-width: 400px;
+    height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px -3px #00000075 !important;
+    
+}
+.dynamic-side{
+    border-radius: 10px;
+    /* border: 1px solid green; */
+    box-shadow: 0px 5px 10px -3px #00000075 !important;
+
+}
+.picture{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+.link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.5s;
+    color: black;
+    padding: 30px;
+}
+
+.icon,.link-text{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.active{
+    background: gray;
+}
+
+.button-list{
+    /* border: 1px solid red; */
+    list-style-type: none;
+    padding: 25px;
+   
+}
+.button-list:hover{
+    background-color: rgb(225, 224, 224);
+    box-shadow: 0px 5px 5px -3px #00000075 !important;
+    transition: all 0.5s;
+}
+ul{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.button-style{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+}
+
+.logout-btn-div{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.active{
+    color:green;
+}
+/* STYLING FOR SMALL SCREEN */
+.dashboard-sm{
+    /* border: 1px solid red; */
+    max-width: 100%;
+    margin-top: 15%;
+    height: 100vh;
+
+    box-shadow: 0px 5px 10px -3px #00000075 !important;
+    
+}
+.heading-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative;
+    z-index: -1; */
+
+   
+}
+.side-nav-sm{
+    position: fixed;
+    top: 10%;
+    transition: 5s ease-in-out;
+    z-index:1000;
+    max-width: 400px;
+    height: 80vh;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0px 5px 10px -3px #00000075 !important;
+}
+.icon-sm{
+    color: #C92E81;
+}
+.dynamic-side-sm{
+    z-index: -6;
+}
+@media screen and (max-width: 768px){
+    
+   
+   
+}
+@media screen and (max-width: 996px){
+   
+   
+}
+@media screen and (max-width: 468px){
+    .dashboard-sm{
+        padding-top: 15%;
+    }
+}

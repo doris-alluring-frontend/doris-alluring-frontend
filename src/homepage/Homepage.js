@@ -52,20 +52,19 @@ const Homepage = () => {
                        <div className='vertical-line'>
 
                        </div>
-                        <h2 className='hero-text'>DORIS ALLURING SKIN CARE PRODUCTS ARE MADE FROM<br/>
-                         THE FINEST HERBS AND NATURAL OIL FOR {''} 
-                         <span className='dynamic-text'>{skinColor}</span> SKIN
-                        </h2>
+                       <div className='hero-text-div'>
+                            <h2 className='hero-text'>DORIS ALLURING SKIN CARE PRODUCTS ARE MADE FROM
+                                THE FINEST HERBS AND NATURAL OIL FOR {''} 
+                                <span className='dynamic-text'>{skinColor}</span> SKIN
+                            </h2>
+                       </div> 
+                       
                     </div>
                 </div>
                 <div className="overlay"></div>
             </section>
             <hr className='py-3'/>
             <section className='know-more'>
-                <div className='text-center'>
-                <h3>What Do We Do?</h3>
-                <p className='know-more-intro'>Quos veniam voluptatum dolores soluta molestiae harum, ex doloribus! Aliquid nihil nulla temporibus suscipit veritatis ea vero quisquam repudiandae expedita fuga dignissimos quasi, at, quia fugiat labore itaque nam natus. </p>
-                </div>
                
                 <div className='display-cards container pb-3'>
                     <div className='story-card'></div>
