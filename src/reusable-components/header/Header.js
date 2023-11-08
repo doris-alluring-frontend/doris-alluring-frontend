@@ -2,9 +2,17 @@ import CustomButton from '../CustomButton';
 import './header.css';
 import { Link, useNavigate} from 'react-router-dom';
 import { useState } from 'react';
+import MyAccount from '../../conditionalContents/MyAccount';
+import MyNotification from '../../conditionalContents/MyNotification';
+import MyFavorites from '../../conditionalContents/MyFavorites';
+import MyCart from '../../conditionalContents/MyCart';
+import MyOrder from '../../conditionalContents/MyOrder';
+import { FaUserAlt,FaBell,FaCartPlus,FaShoppingBasket,FaHeart } from 'react-icons/fa';
+
 
 function Header() {
     const navigate = useNavigate();
+    const [selectedNavItem, setSelectedNavItem] = useState("");
     const [menuVisible, setMenuVisible] = useState(false);
     const handleButtonClick = (event) =>{
         const innerText = event.target.innerText;
@@ -16,10 +24,47 @@ function Header() {
         
     }
   
-
+    const drop_down_selected = (value_to_save) =>{
+      
+      const key = 'displayState'
+      sessionStorage.setItem(key, value_to_save.name)
+    }
     const toggleMenu = () => {
       setMenuVisible(!menuVisible);
     }
+    const routePaths = {
+      'My Account': '/my-account',
+      'My Notification': '/my-notification',
+      'My Cart': '/my-cart',
+      'My Orders': '/my-orders',
+      'My Favorites': '/my-favorites',
+    };
+    const navigationItems = [
+      { name: 'My Account', icon: <FaUserAlt/> },
+      { name: 'My Notification', icon: <FaBell/> },
+      { name: 'My Cart', icon: <FaCartPlus/> },
+      { name: 'My Orders', icon: <FaShoppingBasket/> },
+      { name: 'My Favorites', icon: <FaHeart/> },
+    ];
+    const displayConditionalContent =()=>{
+      if (selectedNavItem) {
+    
+          switch (selectedNavItem.name) {
+            case 'My Account':
+              return <MyAccount/>;
+            case 'My Notification':
+              return <MyNotification/>
+            case 'My Favorites':
+              return <MyFavorites/>;
+            case 'My Cart':
+              return <MyCart/>
+            case 'My Orders':
+              return <MyOrder/>;
+            default:
+              return <MyAccount/>;
+          }
+        } 
+  }
     return(
         <>
         <header className="hero py-4 d-none d-lg-block mb-4 w-100 px-5">
@@ -41,18 +86,48 @@ function Header() {
                   </svg>
                 </a>
                 <a href="#blog" className="blog-link ts-16 tw-400 d-none d-lg-block">Blog</a>
-                <a href='/userDashboard' >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" viewBox="0 0 41 42" fill="none">
-              <g clip-path="url(#clip0_201_16710)">
-              <path d="M20.4365 23.3126C26.7647 23.3126 31.8989 18.1784 31.8989 11.8501C31.8989 5.52193 26.7647 0.387726 20.4365 0.387726C14.1083 0.387726 8.97405 5.52193 8.97405 11.8501C8.97405 18.1784 14.1083 23.3126 20.4365 23.3126ZM30.6253 25.8598H26.2393C24.4722 26.6717 22.5061 27.1334 20.4365 27.1334C18.3669 27.1334 16.4087 26.6717 14.6336 25.8598H10.2477C4.61993 25.8598 0.0588379 30.4209 0.0588379 36.0486V37.3222C0.0588379 39.4316 1.77024 41.143 3.87964 41.143H36.9933C39.1027 41.143 40.8141 39.4316 40.8141 37.3222V36.0486C40.8141 30.4209 36.253 25.8598 30.6253 25.8598Z" fill="#C92E81"/>
-              </g>
-              <defs>
-              <clipPath id="clip0_201_16710">
-              <rect width="40.7553" height="40.7553" fill="white" transform="translate(0.05896 0.387726)"/>
-              </clipPath>
-              </defs>
-              </svg>
-                </a>
+                <div className='dropdown'>
+                  <button className="btn "
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-mdb-toggle="dropdown"
+                      aria-expanded="false">
+                      <a href='/userDashboard' >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" viewBox="0 0 41 42" fill="none">
+                    <g clip-path="url(#clip0_201_16710)">
+                    <path d="M20.4365 23.3126C26.7647 23.3126 31.8989 18.1784 31.8989 11.8501C31.8989 5.52193 26.7647 0.387726 20.4365 0.387726C14.1083 0.387726 8.97405 5.52193 8.97405 11.8501C8.97405 18.1784 14.1083 23.3126 20.4365 23.3126ZM30.6253 25.8598H26.2393C24.4722 26.6717 22.5061 27.1334 20.4365 27.1334C18.3669 27.1334 16.4087 26.6717 14.6336 25.8598H10.2477C4.61993 25.8598 0.0588379 30.4209 0.0588379 36.0486V37.3222C0.0588379 39.4316 1.77024 41.143 3.87964 41.143H36.9933C39.1027 41.143 40.8141 39.4316 40.8141 37.3222V36.0486C40.8141 30.4209 36.253 25.8598 30.6253 25.8598Z" fill="#C92E81"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_201_16710">
+                    <rect width="40.7553" height="40.7553" fill="white" transform="translate(0.05896 0.387726)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                      </a>
+                  </button>
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    {
+                      navigationItems.map((item,index)=>(
+                        <li key={index} className='dropdown-item px-2' onClick={() =>{ 
+                            setSelectedNavItem(item)
+                            drop_down_selected(item)
+                          }
+                        }>
+                        <Link to="/userDashboard">
+                        <span className="icon ">{item.icon}</span>
+                        <span className="link-text">{item.name}</span>
+                        </Link>
+                        
+                        </li>
+                      ))
+                    }
+                    {/* <li><a className="dropdown-item" href="/">Action</a></li>
+                    <li><a className="dropdown-item" href="/">Another action</a></li>
+                    <li><a className="dropdown-item" href="/">Something else here</a></li> */}
+                  </ul>
+                </div>
+                
+               
             </div>
            
             

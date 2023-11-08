@@ -45,11 +45,11 @@
 }
 
 .icon,.link-text{
-    font-size: 18px;
+    font-size: 1rem;
     margin-right: 10px;
 }
-.active{
-    background: gray;
+.active-item{
+    background: rgb(225, 224, 224);
 }
 
 .button-list{
@@ -80,6 +80,7 @@ ul{
     display: flex;
     justify-content: center;
 }
+
 .active{
     color:green;
 }
@@ -108,19 +109,25 @@ ul{
     transition: 5s ease-in-out;
     z-index:1000;
     max-width: 400px;
-    height: 80vh;
+    height: 100vh;
     border-radius: 0px;
     background-color: white;
     box-shadow: 0px 5px 10px -3px #00000075 !important;
 }
+.link-text-sm{
+    font-size: 1.2rem;
+}
 .icon-sm{
-    color: #C92E81;
+    color: #b1226e;
+    
 }
 .dynamic-side-sm{
     z-index: -6;
 }
 @media screen and (max-width: 768px){
-    
+    .dashboard-sm{
+        /* margin-top: 20%; */
+    }
    
    
 }
@@ -132,4 +139,5 @@ ul{
     .dashboard-sm{
         padding-top: 15%;
     }
+  
 }

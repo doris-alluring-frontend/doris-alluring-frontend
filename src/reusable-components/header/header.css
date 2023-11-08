@@ -3,6 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
+.btn{
+  background-color: rgba(245, 240, 240);
+  border: 2px solid rgba(245, 240, 240, 0.8);
+  border-radius: 50px;
+}
 .hero {
     /* background-color: black; */
     position: fixed;
@@ -58,8 +70,7 @@ header{
   }
 .hero{
     background-color: white;
-    /* box-shadow: 5px 5px 10px whitesmoke; */
-    /* border: 1px solid red; */
+   
    
 }
 

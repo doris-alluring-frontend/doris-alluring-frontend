@@ -120,7 +120,12 @@
 }
 @media screen and (max-width: 768px){
     
-   
+    .user-info h6{
+        font-size: 0.8rem;
+    }
+    .contact-address h6{
+        font-size: 0.8rem;
+    }
    
 }
 @media screen and (max-width: 996px){
@@ -128,5 +133,24 @@
    
 }
 @media screen and (max-width: 468px){
-
+    .user-info h6{
+        font-size: 0.8rem;
+    }
+    .contact-address h6{
+        font-size: 0.8rem;
+    }
+    .message-icon{
+        height: 40px;  
+    }
+    .label{
+        font-weight: 400;
+    }
+    .user-info{
+        width: 50%;
+       
+    }
+    .contact-address{
+        width: 50%;
+        margin-left: 1%;
+    }
 }

@@ -11,13 +11,13 @@ const MyAccount =()=>{
                 
                 <div className="user-info"> 
                 <h6 className="p-2 mb-3">ACCOUNT DETAILS</h6><hr/>
-                <p className="p-2 label"><span className="label">Name: </span>Ebele Doris</p>
-                <p className="p-2"><span className="label">Email: </span>user@gmail.com</p>
+                <p className="p-1 label"><span className="label d-none d-lg-block">Name </span>Ebele Doris</p>
+                <p className="p-1"><span className="label d-none d-lg-block">Email </span>user@gmail.com</p>
                 </div>
                 <div className="contact-address">
                 <h6 className="p-2 mb-3 ">ADDRESS DETAILS</h6><hr/>
-                <p className="p-2"><span className="label">Phone number: </span>+234675432190</p>
-                <p className="p-2"><span className="label">Address: </span>no 15 ogidi road,Anambra State</p>
+                <p className="p-1"><span className="label d-none d-lg-block">Phone number </span>+234675432190</p>
+                <p className="p-1"><span className="label d-none d-lg-block">Address </span>no 15 ogidi road,Anambra State</p>
                 </div>
                
             </div>

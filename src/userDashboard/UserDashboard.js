@@ -1,6 +1,5 @@
 import Header from "../reusable-components/header/Header";
 import {FaUserAlt,FaBell,FaCartPlus,FaShoppingBasket,FaHeart} from "react-icons/fa";
-// import { NavLink } from "react-router-dom";
 import "./userDashboard.css";
 import { useState } from "react";
 import MyNotification from "../conditionalContents/MyNotification";
@@ -11,14 +10,66 @@ import MyOrder from "../conditionalContents/MyOrder"
 import CustomButton from "../reusable-components/CustomButton";
 import DashboardNavigation from "../reusable-components/header/DasboardNavigation";
 
-const UserDashboard = () =>{
-    const [selectedNavItem, setSelectedNavItem] = useState(null);
-    const [menuVisible, setMenuVisible] = useState(false);
-    const [headerContent, setHeaderContent] = useState({
-      title: '',
-      icon: '',
-    });
 
+
+const UserDashboard = () =>{
+  const displayState = () =>{
+    const key = 'displayState'
+       let state_to_display =  sessionStorage.getItem(key)
+      //  let state_to_display = JSON.parse(state_from_storage)
+      
+        if (state_to_display === ''|| state_to_display === null){
+          return <MyAccount/>
+        }
+        else {
+          let current_state = {name: state_to_display}
+          
+          switch (current_state.name) {
+            
+            case 'My Account':
+              return <MyAccount/>;
+            case 'My Notification':
+              return <MyNotification/>
+            case 'My Favorites':
+              return <MyFavorites/>;
+            case 'My Cart':
+             
+              return <MyCart/>
+            
+            case 'My Orders':
+              return <MyOrder/>;
+            default:
+              return <MyAccount/>;
+          }
+          // return the_function(current_state)
+        }
+      //  sessionStorage.setItem(key , '')
+  
+  }
+  const the_function=(boolean_state)=>{
+    console.log('the current object ',  boolean_state);
+    if (boolean_state) {
+     
+            
+      switch (boolean_state.name) {
+        case 'My Account':
+          return <MyAccount/>;
+        case 'My Notification':
+          return <MyNotification/>
+        case 'My Favorites':
+          return <MyFavorites/>;
+        case 'My Cart':
+          return <MyCart/>
+        case 'My Orders':
+          return <MyOrder/>;
+        default:
+          return <MyAccount/>;
+      }
+    } 
+  } 
+    const [selectedNavItem, setSelectedNavItem] = useState( displayState());
+    const [menuVisible, setMenuVisible] = useState(false);
+   
 
     const toggleSideNav =() =>{
       setMenuVisible(!menuVisible);
@@ -31,6 +82,10 @@ const UserDashboard = () =>{
         { name: 'My Orders', icon: <FaShoppingBasket/> },
         { name: 'My Favorites', icon: <FaHeart/> },
       ];
+      const [headerContent, setHeaderContent] = useState({
+        title:navigationItems[0].name,
+        icon:navigationItems[0].icon,
+      });
   
        const handleNavigationItemClick = (item) => {
         setMenuVisible(false);
@@ -59,23 +114,25 @@ const UserDashboard = () =>{
                     return <MyAccount/>;
                 }
               } 
+            // return the_function(selectedNavItem)
         }
 
     return(
         <>
        
       <div className="container-fluid d-lg-block d-none" id="my-container">
-       <Header/>
+            <DashboardNavigation/>
             <div className="dashboard">
              <div className="side-nav">
                 <div className="profile-part p-2">
                     <div className="name">
                         <h4 className="mx-3">Welcome,Ebele</h4>
+                        
                     </div>
                 </div>
                 <ul >
                     {navigationItems.map((item, index) => (
-                    <li key={index} className="button-list" onClick={() => setSelectedNavItem(item)} >
+                    <li key={index} className={`button-list ${item.name ===selectedNavItem.name ? 'active-item' : ''}`} onClick={() => setSelectedNavItem(item)} >
                         <button className="button-style" activeClassName="active">
                        <span className="icon ">{item.icon}</span>
                         <span className="link-text">{item.name}</span>
@@ -83,9 +140,7 @@ const UserDashboard = () =>{
                     </li>
                     ))}
                 </ul>
-                <div className="logout-btn-div">
-                  <CustomButton   text="Logout" maxWidth="87px" width="100%" height="45px" />
-                </div>
+              
                
                    
              </div>
@@ -100,8 +155,8 @@ const UserDashboard = () =>{
         
 
       <div className="d-sm-block d-lg-none">
-      <Header/>
-      <div className="dashboard-sm">
+      <DashboardNavigation/>
+      <div className="dashboard-sm ">
       
        
           <div className="heading-nav">
@@ -111,7 +166,7 @@ const UserDashboard = () =>{
             </svg>
             </div>
             <div className="dynamic-header ">
-            <span className="link-text px-2">{headerContent.title}</span>
+            <span className="link-text link-text-sm px-2">{headerContent.title}</span>
             </div>
             <div className="">
             <span className="icon icon-sm">{headerContent.icon}</span>
@@ -128,7 +183,7 @@ const UserDashboard = () =>{
                     </li>
                     ))} 
                 </ul>
-                <div className="logout-btn-div">
+                <div className="logout-btn-div w-100">
                   <CustomButton   text="Logout" maxWidth="87px" width="100%" height="45px" />
                 </div>
         </div>
